@@ -1,7 +1,5 @@
 # Education and Career Success
 
-
-
 <!-- Table of Contents -->
 [Project Description](#1-project-description) |
 [Folder Structure](#2-folder-structure) |
