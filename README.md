@@ -1,6 +1,17 @@
-# Education & Career Success – Data Mining Group Project
+# Education and Career Success Data Mining Group Project
 
-[ [Project Description](#project-description) ]  [ [Folder Structure](#folder-structure) ]  [ [About the Dataset](#about-the-dataset) ]  [ [Setup & Installation](#setup-&-installation) ]  [ [Usage](#usage) ]  [ [License & Citation](#license-&-citation) ]  [ [Team Tasks & Timeline](#team-tasks-&-timeline) ]  [ [Expectations](#expectations) ]  [ [Additional Notes](#additional-notes) ]
+# Predicting Housing Market Trends Using Data Science
+
+<!-- Table of Contents -->
+[Project Description](#1-project-description) |
+[Folder Structure](##2-folder-structure) |
+[About the Dataset](#3-about-the-dataset) |
+[Setup and Installation](#4-setup-and-installation) |
+[Usage](#5-usage) |
+[License and Citation](#6-license-and-citation) |
+[Team Tasks and Timeline](#7-team-tasks-and-timeline) |
+[Expectations](#8-expectations) |
+[Additional Notes](##9-additional-notes)
 
 
 ## 1. Project Description
@@ -62,7 +73,9 @@ Recommended folder layout for this repository (you can adjust naming or add subf
 - **`docs/`** *(optional)*  
   - Additional documentation, diagrams, or references related to the project.
 
-[Back to Top](#education-&-career-success–data-mining-group-project)
+[Back to Top](#education-and-career-success-data-mining-group-project)
+
+[Back to Top](#predicting-housing-market-trends-using-data-science)
 
 ---
 
@@ -82,11 +95,11 @@ Recommended folder layout for this repository (you can adjust naming or add subf
 - Size of the data (~5000 records) is manageable, but care is needed when storing or sharing any personal data.  
 - Data is partially cleaned, but further wrangling may be required (e.g., handling missing or invalid values).
 
-[Back to Top](#education-&-career-success–data-mining-group-project)
+[Back to Top](#education-and-career-success---data-mining-group-project)
 
 ---
 
-## 4. Setup & Installation
+## 4. Setup and Installation
 
 1. **Clone the Repository**  
    ```bash
@@ -109,7 +122,7 @@ Recommended folder layout for this repository (you can adjust naming or add subf
 - Sign in to Kaggle, navigate to Education & Career Success Dataset, and download education_and_career_success.csv.
 - Place the CSV file in the data/ folder (or wherever you prefer) and update paths in the notebooks accordingly.
 
-[Back to Top](#education-&-career-success–data-mining-group-project)
+[Back to Top](#education-and-career-success---data-mining-group-project)
 
 ---
 ## 5. Usage
@@ -130,21 +143,21 @@ Recommended folder layout for this repository (you can adjust naming or add subf
 - Capture final results (accuracy, R², or other metrics) and interpret them in the context of the research questions.
 - Summarize findings and potential next steps in the concluding section of the modeling notebook or in separate documentation.
 
-[Back to Top](#education-&-career-success–data-mining-group-project)
+[Back to Top](#education-and-career-success---data-mining-group-project)
 
 ---
 
-## 6. License & Citation
+## 6. License and Citation
 
 - **Data License**: We are using a publicly available dataset from [Kaggle](https://www.kaggle.com/). Refer to its page for any specific usage restrictions.  
 - **Code License**: This project is provided “as is” without warranty of any kind. We are making it publicly accessible for academic and educational purposes, but not officially released under a specific open-source license at this time.
 - **Citation**: If you build upon or reference this work in any publication, please acknowledge both our repository and the [original dataset on Kaggle](https://www.kaggle.com/datasets/adilshamim8/education-and-career-success?resource=download).
 
-[Back to Top](#education-&-career-success–data-mining-group-project)
+[Back to Top](#education-and-career-success---data-mining-group-project)
 
 ---
 
-## 7. Team Tasks & Timeline
+## 7. Team Tasks and Timeline
 
 Below is the internal breakdown of tasks and deadlines. Each section aligns with the roles described:
 
@@ -159,7 +172,7 @@ Below is the internal breakdown of tasks and deadlines. Each section aligns with
 | Final Compilation & Formatting                 | Rosendo       | Mar 27  |
 | Submission                                     | Entire Team   | Mar 29   |
 
-[Back to Top](#education-&-career-success–data-mining-group-project)
+[Back to Top](#education-and-career-success---data-mining-group-project)
 
 ---
 
@@ -170,11 +183,13 @@ Below is the internal breakdown of tasks and deadlines. Each section aligns with
 - **Quality Over Quantity**: Aim for concise but thorough notebooks and documentation.  
 - **Respect Deadlines**: If you anticipate delays, let the team know in advance.
 
-[Back to Top](#education-&-career-success–data-mining-group-project)
+[Back to Top](#education-and-career-success---data-mining-group-project)
 
 ---
 ## 9. Additional Notes
 	•	No disclaimers or security/privacy considerations are required beyond those enforced by Kaggle.
 	•	Refer to the PDF (linked or placed in docs/) for more detailed background, literature review, or references.
 
-[Back to Top](#education-&-career-success–data-mining-group-project)
+[Back to Top](#education-and-career-success---data-mining-group-project)
+
+[Back to Top](#predicting-housing-market-trends-using-data-science)
