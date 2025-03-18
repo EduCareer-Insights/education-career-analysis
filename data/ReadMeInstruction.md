@@ -1,106 +1,116 @@
 # Team Workflow Guide
 
-This guide provides a single, continuous set of steps for working on this project together, from installing Git to merging final changes into the `main` branch.
+Below is a single, continuous set of steps that covers how to work with existing branches, create new branches if needed, make changes, and merge updates back into `main`. Please read carefully and follow each step to avoid merge conflicts or confusion.
 
-1. **Install Git**  
-   - Make sure you have Git installed on your machine.  
-   - If you need help, visit https://git-scm.com/downloads.
-
----
-2. **GitHub Account**  
-   - Each team member must have a GitHub account.  
-   - Ensure you have collaborator access to this repository so you can push and pull changes.
+1. **Install Git and Have a GitHub Account**  
+   - Make sure Git is installed on your machine: https://git-scm.com/downloads  
+   - Have a GitHub account with collaborator access to this repository.
 
 ---
-3. **Cloning the Repository**  
-   - On the repository’s GitHub page, click the green “Code” button and copy the HTTPS or SSH link.  
-   - Open your terminal or command prompt, then run:
+2. **Clone the Repository**  
+   - On this repository’s GitHub page, click the green “Code” button. Copy the HTTPS (or SSH) URL.  
+   - In your terminal, run:
      ```bash
      git clone https://github.com/EduCareer-Insights/Your_Repo_Name.git
      cd Your_Repo_Name
      ```
-   - You now have the codebase on your local machine.
+   - You now have a local copy of the codebase.
 
 ---
-4. **Creating a Branch for**  
-   - First, make sure your local `main` branch is up to date:
+3. **Sync Local Main Before Starting Any Work**  
+   - Always ensure your local `main` branch is up to date:
      ```bash
      git checkout main
      git pull origin main
      ```
-   - Create a new branch with a descriptive name:
+
+---
+4. **Check for Existing Branches or Create a New One**  
+   - **If a relevant branch already exists** (e.g., `rosendo/data-resources`, `braxton/data-types`), switch to it:
+     ```bash
+     git checkout rosendo/data-resources
+     git pull origin rosendo/data-resources
+     ```
+   - **If you need a new branch** for your task, create and switch to it:
      ```bash
      git checkout -b feature-data-wrangling
      ```
-   - This new branch is where you’ll make your changes without affecting `main`.
+   - Use descriptive names (e.g., `bugfix/null-handling`, `docs/readme-update`).
 
 ---
-5. **Making Changes**  
-   - Edit or add code, notebooks, or documentation files relevant to your task.  
-   - If your work depends on a CSV, confirm it’s placed in the correct folder (e.g., `data/`).  
-   - If you have tests, run them to ensure everything is working correctly.
+5. **Make Your Changes**  
+   - Edit or add the code, notebooks, or docs you’re responsible for.  
+   - If your work depends on a CSV file, confirm it’s located in the correct folder (e.g., `data/education_career_success.csv`).  
+   - If you have tests (even manual checks in notebooks), run them to ensure everything is working.
 
 ---
-6. **Committing Your Changes**  
-   - Stage the changes:
+6. **Stage and Commit Locally**  
+   - Stage all changes:
      ```bash
      git add .
      ```
-     (Or list specific files, e.g. `git add my_notebook.ipynb`.)  
-   - Commit:
+     (Or stage individual files as needed.)  
+   - Commit with a clear message:
      ```bash
      git commit -m "Implement data wrangling function"
      ```
-     Use clear, concise messages describing your changes.
 
 ---
-7. **Push and Create a Pull Request**  
-   - Push your new branch to GitHub:
+7. **Push Your Branch and Open/Update a Pull Request**  
+   - Push your branch to GitHub:
      ```bash
-     git push origin feature-data-wrangling
+     git push origin <branch-name>
      ```
-   - Go to your repository page on GitHub. You should see a prompt to “Compare & pull request.”  
-   - Click it, provide a short description of your changes, add reviewers if needed, and create the PR.
+     (Replace `<branch-name>` with the actual name, e.g., `rosendo/data-resources`.)  
+   - If a Pull Request (PR) already exists for this branch, your new commits will appear automatically.  
+   - Otherwise, on GitHub, click **Compare & pull request** to open a new PR. Provide a concise summary, tag reviewers if needed.
 
 ---
-8. **Code Review & Approval**  
-   - Your teammates can comment or request changes in the Pull Request.  
-   - If changes are requested, make them on your local branch, commit, and push again; the PR updates automatically.  
-   - Once everyone is satisfied, the PR can be approved.
+8. **Code Review and Feedback**  
+   - Teammates or reviewers may comment on your PR with suggestions or changes.  
+   - If you need to fix anything, make additional commits on the same branch and push again. The PR updates automatically.
 
 ---
-9. **Merging into Main**  
-   - After approval, merge your PR via GitHub (e.g. “Merge pull request” or “Squash and merge”).  
-   - Sync your local `main` with the latest changes:
+9. **Merge into Main**  
+   - Once approved, merge the PR on GitHub (e.g., “Merge pull request” or “Squash and merge”).  
+   - After merging, **sync your local `main`**:
      ```bash
      git checkout main
      git pull origin main
      ```
-   - Your work is now part of the main codebase.
 
 ---
-10. **Common Tips & Best Practices**  
-   - **Pull Before Push**: Always `git pull origin main` when you switch to `main` to avoid conflicts.  
-   - **Small, Frequent Commits**: Easier to track changes and revert if needed.  
-   - **Descriptive Branch Names**: e.g., `bugfix-missing-data`, `docs-update-readme`.  
-   - **Avoid Committing Large Files**: If the dataset is huge, consider Git LFS or separate hosting.  
-   - **Team Communication**: If you’re making major changes, inform the team early.
-
----
-11. **Using `check_file_exists` (Optional)**  
-   - If you have a function like:
-     ```python
-     data_df = check_file_exists('data/education_career_success.csv')
+10. **Cleanup / Branch Maintenance**  
+   - If a branch is no longer needed, you can delete it on GitHub and locally:
+     ```bash
+     git branch -d <branch-name>
+     git push origin --delete <branch-name>
      ```
-     Ensure the CSV is in `data/education_career_success.csv` so the script/notebook can find it.  
-   - If it’s not present locally, the script will warn you to download or clone properly.
+   - This keeps the repository tidy.
 
 ---
-12. **Next Steps**  
-   - **Team Coordination**: Use GitHub Issues or a team chat for day-to-day updates.  
-   - **Versioning**: Tag stable releases (e.g. `v1.0`) if you want to mark major milestones.  
-   - **Documentation**: Keep this guide, the README, and any other docs updated with new changes or processes.
+11. **Tips & Best Practices**  
+   - **Pull Before You Push**: Always `git pull origin main` on the main branch before creating or switching to a feature branch.  
+   - **Small, Frequent Commits**: Makes it easier to track changes and revert if needed.  
+   - **Descriptive Commit Messages**: Helps teammates (and your future self) understand the history.  
+   - **Avoid Committing Large Files**: If the dataset is huge, consider Git LFS or separate hosting.  
+   - **Communicate**: If you’re making major changes, let the team know early.
+
+---
+12. **Using `check_file_exists` (Optional)**  
+   - If your code calls:
+     ```python
+     original_df = w.check_file_exists('data/education_career_success.csv')
+     ```
+     Ensure the CSV file is in `data/`. If not found, the script/notebook warns you.  
+   - This is optional, but helps confirm data is present locally.
+
+---
+13. **Next Steps**  
+   - **Team Coordination**: Use GitHub Issues or chat tools to discuss tasks.  
+   - **Versioning**: Tag or release stable milestones (e.g., `v1.0`).  
+   - **Documentation**: Update this guide, the README, or other docs as processes evolve.
 
 ---
 
-**That’s it!** By following these sequential steps, everyone on the team can safely make changes, open Pull Requests for review, and merge into `main` without causing conflicts.
+**That’s the entire workflow!** By following these steps in one continuous sequence, each team member can safely make changes, open/close pull requests, and merge to `main` without clashing with anyone else’s work.
