@@ -1,0 +1,55 @@
+Project Proposal 1
+ 
+(i) Team:
+a. Names and brief overview of skillsets they will bring to this project 
+ 
+(ii) Introduction of the project including:
+a. What your main idea is and why it is interesting?
+b. Motivation; tell the reader why it is important practically and theoretically
+c. Identify a problem, e.g., lack of previous research and explain how your research addresses the problem
+d. Ask a research question that follows from the above
+ 
+(iii) The Literature Review: should be 2-4 paragraphs long and include:
+a. Establish the field you are working in - if little research has been done on your topic, find something similar 
+    I. (Example: if were to analyze tweets when users referenced Big 10 institutions but realized there is little research about this specific topic, you could likely still find research on how tweets have been analyzed – regardless of topic area – or possibly social media related research for higher education institutions)
+b. Cite at least 3 sources related to your topic/data and think about:
+    I. For methodological studies, explain the method that was proposed and how it was tested, what was learned, and what gaps exist
+    ii. For empirical studies, indicate what kind of data was analyzed, what research question was asked, and what was found/not found as a result 
+    iii. For conceptual studies, indicate what was claimed, on what basis, and other relevant background info the reader should know to help with understanding. 
+Clearly cite the related works you discuss
+
+-------------------------------------------------------------------------------------------------------------------
+Project Proposal 2
+(iv) Data Resources
+Resource in detail, where did you find this data, etc.
+ 
+(v) Description of the Data
+a. Preliminary Data Analysis: 
+     i. What are the different data types? 
+        1. What are the missing values? 
+        2. Steps for cleaning the data? 
+        3. Descriptives and Statistical Inference of the data
+ 
+(vi) Hypothesis and Goals
+a. Describe the main inference or analysis you would like to make with this data. Before you analyze the data, what guesses or hypotheses do you have about the data? What biases may exist? 
+b. Think about the "end goal" of the project. At this stage, you don't have to know how you're going to get there.  
+     i. As an example, you may want to see if Variable A and Variable B are correlated. The main goal here may be to see if a relationship exists. If a relationship does or does not exist, what does that mean to your analysis? Think about what do you want to do with the data?
+
+-------------------------------------------------------------------------------------------------------------------
+Final Project:
+Your final submission should include all the above elements that you have already submitted. Based on feedback provided, your final project submission can include updates to what you already submitted. 
+ 
+(vii) Research Design,  Methods, Visualizations, and Analysis:
+a. Indicate what features you will have to extract from the data and what transformations you will have to do to reach you goal. It is likely you will more likely have to transform the data for it to be usable.
+b. I will expect to see visualizations that tell a story with the data. Be mindful of how you write about the data. 
+c. For analysis, you will need to use the software R in some way. 
+ 
+(viii) Conclusions: 
+a. Reiterate the importance or significance of your proposal and provide a brief summary of the entire study.
+      i.     What learnings occurred as a result of your analysis? 
+      ii.     Why are you using the data and research design you have chosen over other options,
+      iii.     What are some potential real world, theoretical or methodological implications of your study?
+      iv.     Limitations or other considerations you encountered and changes you would make for next time? 
+ 
+(ix)         References:
+(x)           Appendix:
