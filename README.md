@@ -28,7 +28,7 @@ To identify the key determinants of career success and develop predictive models
 
 ## 2. Folder Structure
 
-Recommended folder layout for this repository (you can adjust naming or add subfolders as needed):
+Folder layout for our repository:
 
 ```plaintext
 ├── README.md
@@ -54,7 +54,7 @@ Recommended folder layout for this repository (you can adjust naming or add subf
 
 - **`data/`**  
   - A place to store the dataset or partial samples if the full dataset is large or restricted.  
-  - Include a `README.md` explaining how to access or download the complete dataset from [Kaggle](https://www.kaggle.com/datasets/adilshamim8/education-and-career-success?resource=download).
+  - A `README.md` explaining how to access or download the complete dataset from [Kaggle](https://www.kaggle.com/datasets/adilshamim8/education-and-career-success?resource=download).
 
 - **`notebooks/wrangle/`**  
   - Jupyter notebooks for data cleaning and preprocessing steps (handling missing values, feature engineering).
@@ -124,20 +124,21 @@ Recommended folder layout for this repository (you can adjust naming or add subf
 ## 5. Usage
 
 ### Data Wrangling
-- Open `notebooks/wrangle/wrangle_data.ipynb` and run cells to clean and preprocess the raw data.
+- Open `notebooks/wrangle/wrangle.py` and run cells to clean and preprocess the raw data.
 - Inspect columns, handle missing values, and perform feature engineering as needed.
 
 ### Data Exploration
-- Run `notebooks/explore/explore_data.ipynb` to visualize distributions, relationships, and correlations among variables.
+- Run `notebooks/explore/explore.py` to visualize distributions, relationships, and correlations among variables.
 - Generate summary statistics and initial observations.
 
 ### Modeling
-- Execute `notebooks/modeling/model_training.ipynb` to build and evaluate predictive models (e.g., linear regression, random forest, etc.).
+- Execute `notebooks/modeling/modeling.py` to build and evaluate predictive models (e.g., linear regression, random forest, etc.).
 - Adjust hyperparameters, compare performance metrics, and select the best model for your goals.
 
-### Results & Insights
-- Capture final results (accuracy, R², or other metrics) and interpret them in the context of the research questions.
-- Summarize findings and potential next steps in the concluding section of the modeling notebook or in separate documentation.
+### Results & Insights 
+(Placeholder for results and Insights)
+- Final results (accuracy, R², or other metrics) and interpret them in the context of the research questions.
+- Summary of findings and potential next steps in the concluding section of the modeling notebook or in separate documentation.
 
 [Back to Top](#education-and-career-success)
 
@@ -165,7 +166,7 @@ Below is the internal breakdown of tasks and deadlines. Each section aligns with
 | (v)(a)(iii) Descriptive & Statistical Analysis | Spencer       | Mar 18   |
 | (vi) Hypothesis & Goals                        | Becca         | Mar 20   |
 | Internal Review & Edits                        | Entire Team   | Mar 22-25|
-| Final Compilation & Formatting                 | Rosendo       | Mar 27  |
+| Final Compilation & Formatting                 | Rosendo       | Mar 27   |
 | Submission                                     | Entire Team   | Mar 29   |
 
 [Back to Top](#education-and-career-success)
