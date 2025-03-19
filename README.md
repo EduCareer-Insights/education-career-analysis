@@ -184,7 +184,7 @@ Below is the internal breakdown of tasks and deadlines. Each section aligns with
 
 ---
 ## 9. Additional Notes
-	•	No disclaimers or security/privacy considerations are required beyond those enforced by Kaggle.
-	•	Refer to the PDF (linked or placed in docs/) for more detailed background, literature review, or references.
+- No disclaimers or security/privacy considerations are required beyond those enforced by Kaggle.
+- Refer to the PDF (linked or placed in docs/) for more detailed background, literature review, or references.
 
 [Back to Top](#education-and-career-success)
