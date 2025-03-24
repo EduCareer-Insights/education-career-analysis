@@ -1,0 +1,87 @@
+---
+title: "statAnalysis"
+output: html_document
+date: "2025-03-23"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+library(ggplot2)
+
+ecs <-read.csv("data/education_career_success.csv")
+
+get_mode <- function(x) {
+  ux <- unique(x)
+  m <- ux[which.max(tabulate(match(x, ux)))]
+  print(toString(m))
+}
+
+analyze_column <- function(column,largeDat,name) {
+  
+  if(largeDat == FALSE){
+    cat("Data:\n")
+    print(table(column))
+  } else {
+    options(scipen = 999)
+    cat("Data:\n")
+    hist(column, main = paste("Histogram of",name), xlab= name)
+  }
+  
+  cat("\nSummary:\n")
+  print(summary(column))
+  
+  cat("\nMode:\n")
+  get_mode(column)
+  
+  cat("\n--------------------------\n")
+}
+
+print3 <- function(data, columns = NULL,large) {
+  for (col in columns) {
+    if (col %in% names(data)) {
+      cat("Column:", col, "\n")
+      analyze_column(data[[col]], largeDat = large, name=col)
+    } else {
+      cat("Column", col, "column missing.\n")
+    }
+  }
+}
+```
+
+```{r}
+print3(ecs, columns = c("High_School_GPA","SAT_Score","University_Ranking","University_GPA","Starting_Salary"), large=TRUE)
+```
+
+```{r}
+print3(ecs, columns = c("Age","Internships_Completed","Projects_Completed","Certifications","Soft_Skills_Score","Networking_Score","Job_Offers","Career_Satisfaction","Years_to_Promotion","Work_Life_Balance"), large=FALSE)
+```
+
+```{r}
+ageTab <- table(ecs$Gender)
+ageTab
+pie(ageTab, main ="Gender")
+```
+
+```{r}
+stuTab <- table(ecs$Field_of_Study)
+stuTab
+pie(stuTab, main ="Field of Study")
+```
+
+```{r}
+jobLvlTab <- table(ecs$Current_Job_Level)
+jobLvlTab
+pie(jobLvlTab, main ="Current Job Level")
+```
+
+```{r}
+entTab <- table(ecs$Entrepreneurship)
+entTab
+pie(entTab, main ="Entrepreneurship")
+```
+
+```{r}
+```
