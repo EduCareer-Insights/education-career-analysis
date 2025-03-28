@@ -9,9 +9,62 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 ```{r}
+# Data Cleaning and Missing Values 
+education <- read.csv("data/education_career_success.csv")
+View(education)
+nrow(education)
+
+# Identify any missing data
+colSums(is.na(education))
+  # Output shows there is no missing data! 
+
+# Check to see what columns are numerical
+str(education)
+
+# Create a copy of the dataset to have both the original and normalized data
+og_education <- education 
+
+# Define the normalize function
+normalize <- function(x) {
+  return((x - min(x, na.rm = TRUE)) / (max(x, na.rm = TRUE) - min(x, na.rm = TRUE)))
+}
+
+# Select the columns that are numerical to normalize
+numeric_columns <- sapply(education, is.numeric)
+education[, numeric_columns] <- lapply(education[, numeric_columns], normalize)
+
+# View the original dataset
+View(og_education)
+# View the normalized data
+View(education)
+
+# Remove duplicate data
+education <- education[!duplicated(education), ]
+
+# Remove outliers
+remove_outliers <- function(x) {
+  Q1 <- quantile(x, 0.25, na.rm = TRUE)
+  Q3 <- quantile(x, 0.75, na.rm = TRUE)
+  IQR <- Q3 - Q1
+  lower_limit <- Q1 - 1.5 * IQR
+  upper_limit <- Q3 + 1.5 * IQR
+  x[x < lower_limit | x > upper_limit] <- NA  # Replace outliers with NA
+  return(x)
+}
+
+# Apply the function to numeric columns
+education[numeric_columns] <- lapply(education[numeric_columns], remove_outliers)
+
+
+# Save the cleaned dataset
+write.csv(education, "data/Cleaned_Education_Data.csv", row.names = FALSE)
+```
+
+
+```{r}
 library(ggplot2)
 
-ecs <-read.csv("data/education_career_success.csv")
+ecs <-read.csv("data/Cleaned_Education_Data.csv")
 
 get_mode <- function(x) {
   ux <- unique(x)
